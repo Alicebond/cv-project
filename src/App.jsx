@@ -1,12 +1,20 @@
-// import { useState } from "react";
-import "./App.css";
+import React from "react";
+import "./styles/App.css";
+import Education from "./components/Education";
+import Experience from "./components/Experience";
+import GeneralInfo from "./components/GeneralInfo";
 
-function App() {
-  return (
-    <>
-      <p>Hello World</p>
-    </>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <>
+        <p>Hello class component</p>
+        <GeneralInfo />
+        <Education />
+        <Experience />
+      </>
+    );
+  }
 }
 
 export default App;
