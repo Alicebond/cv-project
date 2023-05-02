@@ -8,10 +8,11 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <p>Hello class component</p>
-        <GeneralInfo />
-        <Education />
-        <Experience />
+        <form>
+          <GeneralInfo />
+          <Education />
+          <Experience />
+        </form>
       </>
     );
   }
