@@ -8,12 +8,7 @@ class App extends React.Component {
   constructor() {
     super();
 
-    this.state = {
-      input: { text: "" },
-      general: [],
-      education: [],
-      experience: [],
-    };
+    this.state = {};
   }
 
   handleInputChange(e) {
@@ -24,6 +19,10 @@ class App extends React.Component {
     });
   }
 
+  showInfo(e) {
+    e.preventDefault();
+  }
+
   render() {
     return (
       <>
@@ -31,7 +30,7 @@ class App extends React.Component {
           <GeneralInfo handleChange={this.handleInputChange} />
           <Education handleChange={this.handleInputChange} />
           <Experience handleChange={this.handleInputChange} />
-          <button onClick={this.handleSubmit}>Submit</button>
+          <button onClick={this.showInfo}>Submit</button>
         </form>
       </>
     );
