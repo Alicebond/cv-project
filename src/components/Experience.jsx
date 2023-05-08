@@ -8,7 +8,7 @@ class Experience extends React.Component {
     return (
       <div className="general">
         <p>Experience: </p>
-        <lable htmlFor="company-name">Company Name: </lable>
+        <label htmlFor="company-name">Company Name: </label>
         <input
           type="text"
           id="company-name"
@@ -16,7 +16,7 @@ class Experience extends React.Component {
           alt="user's company name"
           onChange={this.props.handleChange}
         />
-        <lable htmlFor="position">Position Title: </lable>
+        <label htmlFor="position">Position Title: </label>
         <input
           type="text"
           id="position"
@@ -24,7 +24,7 @@ class Experience extends React.Component {
           alt="position title"
           onChange={this.props.handleChange}
         />
-        <lable htmlFor="tasks">Main tasks: </lable>
+        <label htmlFor="tasks">Main tasks: </label>
         <input
           type="text"
           id="tasks"
@@ -32,7 +32,7 @@ class Experience extends React.Component {
           alt="main tasks"
           onChange={this.props.handleChange}
         />
-        <lable htmlFor="date">Date: </lable>
+        <label htmlFor="date">Date: </label>
         <input
           type="text"
           id="date"

@@ -7,7 +7,7 @@ class GeneralInfo extends React.Component {
     return (
       <div className="general">
         <p>General Information: </p>
-        <lable htmlFor="first-name">First Name: </lable>
+        <label htmlFor="first-name">First Name: </label>
         <input
           type="text"
           id="first-name"
@@ -15,7 +15,7 @@ class GeneralInfo extends React.Component {
           alt="user first name"
           onChange={this.props.handleChange}
         />
-        <lable htmlFor="last-name">Last Name: </lable>
+        <label htmlFor="last-name">Last Name: </label>
         <input
           type="text"
           id="last-name"
@@ -23,7 +23,7 @@ class GeneralInfo extends React.Component {
           alt="user last name"
           onChange={this.props.handleChange}
         />
-        <lable htmlFor="email">Email: </lable>
+        <label htmlFor="email">Email: </label>
         <input
           type="email"
           id="email"
@@ -31,7 +31,7 @@ class GeneralInfo extends React.Component {
           alt="user email"
           onChange={this.props.handleChange}
         />
-        <lable htmlFor="phone-number">Phone Number: </lable>
+        <label htmlFor="phone-number">Phone Number: </label>
         <input
           type="tel"
           id="phone-number"

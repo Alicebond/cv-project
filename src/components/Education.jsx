@@ -7,7 +7,7 @@ class Education extends React.Component {
     return (
       <div className="general">
         <p>Educattion: </p>
-        <lable htmlFor="school1">School: </lable>
+        <label htmlFor="school1">School: </label>
         <input
           type="text"
           id="school1"
@@ -15,7 +15,7 @@ class Education extends React.Component {
           alt="school"
           onChange={this.props.handleChange}
         />
-        <lable htmlFor="major">Title of Study: </lable>
+        <label htmlFor="major">Title of Study: </label>
         <input
           type="text"
           id="major"
@@ -23,7 +23,7 @@ class Education extends React.Component {
           alt="major"
           onChange={this.props.handleChange}
         />
-        <lable htmlFor="date1">Date of Study: </lable>
+        <label htmlFor="date1">Date of Study: </label>
         <input
           type="text"
           id="date1"
