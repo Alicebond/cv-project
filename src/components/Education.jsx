@@ -13,6 +13,7 @@ class Education extends React.Component {
           id="school1"
           name="school"
           alt="school"
+          value={this.props.school}
           onChange={this.props.handleChange}
         />
         <label htmlFor="major">Title of Study: </label>
@@ -21,6 +22,7 @@ class Education extends React.Component {
           id="major"
           name="major"
           alt="major"
+          value={this.props.major}
           onChange={this.props.handleChange}
         />
         <label htmlFor="date1">Date of Study: </label>
@@ -29,6 +31,7 @@ class Education extends React.Component {
           id="date1"
           name="schoolDate"
           alt="date of study"
+          value={this.props.schoolDate}
           onChange={this.props.handleChange}
         />
       </div>

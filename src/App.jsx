@@ -11,8 +11,6 @@ class App extends React.Component {
     this.state = {
       showInfo: false,
     };
-    // this.handleInputChange = this.handleInputChange.bind(this);
-    // this.showInfo = this.showInfo.bind(this);
   }
 
   handleInputChange = (e) => {
@@ -74,9 +72,26 @@ class App extends React.Component {
       </section>
     ) : (
       <form>
-        <GeneralInfo handleChange={this.handleInputChange} />
-        <Education handleChange={this.handleInputChange} />
-        <Experience handleChange={this.handleInputChange} />
+        <GeneralInfo
+          handleChange={this.handleInputChange}
+          firstName={this.state.firstName}
+          lastName={this.state.lastName}
+          email={this.state.email}
+          phone={this.state.phone}
+        />
+        <Education
+          handleChange={this.handleInputChange}
+          school={this.state.school}
+          major={this.state.major}
+          schoolDate={this.state.schoolDate}
+        />
+        <Experience
+          handleChange={this.handleInputChange}
+          company={this.state.company}
+          position={this.state.position}
+          tasks={this.state.tasks}
+          companyDate={this.state.companyDate}
+        />
         <button onClick={this.toggleShowInfo}>Submit</button>
       </form>
     );
