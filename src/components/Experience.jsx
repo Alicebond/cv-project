@@ -14,7 +14,7 @@ class Experience extends React.Component {
           id="company-name"
           name="company"
           alt="user's company name"
-          value={this.props.company}
+          value={this.props.company || ""}
           onChange={this.props.handleChange}
         />
         <label htmlFor="position">Position Title: </label>
@@ -23,7 +23,7 @@ class Experience extends React.Component {
           id="position"
           name="position"
           alt="position title"
-          value={this.props.position}
+          value={this.props.position || ""}
           onChange={this.props.handleChange}
         />
         <label htmlFor="tasks">Main Tasks: </label>
@@ -32,7 +32,7 @@ class Experience extends React.Component {
           id="tasks"
           name="tasks"
           alt="main tasks"
-          value={this.props.tasks}
+          value={this.props.tasks || ""}
           onChange={this.props.handleChange}
         />
         <label htmlFor="date">Date: </label>
@@ -41,7 +41,7 @@ class Experience extends React.Component {
           id="date"
           name="companyDate"
           alt="date"
-          value={this.props.companyDate}
+          value={this.props.companyDate || ""}
           onChange={this.props.handleChange}
         />
       </div>

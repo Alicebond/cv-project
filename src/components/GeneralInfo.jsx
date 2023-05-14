@@ -13,7 +13,7 @@ class GeneralInfo extends React.Component {
           id="first-name"
           name="firstName"
           alt="user first name"
-          value={this.props.firstName}
+          value={this.props.firstName || ""}
           onChange={this.props.handleChange}
         />
         <label htmlFor="last-name">Last Name: </label>
@@ -22,7 +22,7 @@ class GeneralInfo extends React.Component {
           id="last-name"
           name="lastName"
           alt="user last name"
-          value={this.props.lastName}
+          value={this.props.lastName || ""}
           onChange={this.props.handleChange}
         />
         <label htmlFor="email">Email: </label>
@@ -31,7 +31,7 @@ class GeneralInfo extends React.Component {
           id="email"
           name="email"
           alt="user email"
-          value={this.props.email}
+          value={this.props.email || ""}
           onChange={this.props.handleChange}
         />
         <label htmlFor="phone-number">Phone Number: </label>
@@ -40,7 +40,7 @@ class GeneralInfo extends React.Component {
           id="phone-number"
           name="phone"
           alt="user phone number"
-          value={this.props.phone}
+          value={this.props.phone || ""}
           onChange={this.props.handleChange}
         />
       </div>
