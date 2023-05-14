@@ -27,7 +27,7 @@ class Education extends React.Component {
         <input
           type="text"
           id="date1"
-          name="school-date"
+          name="schoolDate"
           alt="date of study"
           onChange={this.props.handleChange}
         />

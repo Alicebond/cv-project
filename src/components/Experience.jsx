@@ -24,7 +24,7 @@ class Experience extends React.Component {
           alt="position title"
           onChange={this.props.handleChange}
         />
-        <label htmlFor="tasks">Main tasks: </label>
+        <label htmlFor="tasks">Main Tasks: </label>
         <input
           type="text"
           id="tasks"
@@ -36,7 +36,7 @@ class Experience extends React.Component {
         <input
           type="text"
           id="date"
-          name="company-date"
+          name="companyDate"
           alt="date"
           onChange={this.props.handleChange}
         />

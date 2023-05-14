@@ -11,7 +11,7 @@ class GeneralInfo extends React.Component {
         <input
           type="text"
           id="first-name"
-          name="first-name"
+          name="firstName"
           alt="user first name"
           onChange={this.props.handleChange}
         />
@@ -19,7 +19,7 @@ class GeneralInfo extends React.Component {
         <input
           type="text"
           id="last-name"
-          name="last-name"
+          name="lastName"
           alt="user last name"
           onChange={this.props.handleChange}
         />
@@ -35,7 +35,7 @@ class GeneralInfo extends React.Component {
         <input
           type="tel"
           id="phone-number"
-          name="phone-number"
+          name="phone"
           alt="user phone number"
           onChange={this.props.handleChange}
         />
