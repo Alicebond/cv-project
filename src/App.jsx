@@ -5,13 +5,9 @@ import Experience from "./components/Experience";
 import GeneralInfo from "./components/GeneralInfo";
 
 class App extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      showInfo: false,
-    };
-  }
+  state = {
+    showInfo: false,
+  };
 
   handleInputChange = (e) => {
     e.preventDefault();
