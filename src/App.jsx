@@ -1,97 +1,88 @@
-import React from "react";
+import { useState } from "react";
 import "./styles/App.css";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
 import GeneralInfo from "./components/GeneralInfo";
 
-class App extends React.Component {
-  state = {
-    showInfo: false,
-  };
+export default function App() {
+  const [showInfo, setShowInfo] = useState(false);
+  const [info, setInfo] = useState({});
 
-  handleInputChange = (e) => {
+  const handleInputChange = (e) => {
     e.preventDefault();
     const { name, value } = e.target;
-    this.setState({
-      [name]: value,
-    });
+    setInfo((prevInfo) => ({ ...prevInfo, [name]: value }));
   };
 
-  toggleShowInfo = (e) => {
+  const toggleShowInfo = (e) => {
     e.preventDefault();
-    this.setState((prevState) => ({
-      showInfo: !prevState.showInfo,
-    }));
+    setShowInfo((prevState) => !prevState);
   };
 
-  render() {
-    return this.state.showInfo ? (
-      <section>
-        <div className="general">
-          <div className="name">
-            <p>First name: {this.state.firstName}</p>
-            <p>Last name: {this.state.lastName}</p>
-          </div>
-          <div className="email">
-            <p>Email: {this.state.email}</p>
-          </div>
-          <div className="phone">
-            <p>Phone number: {this.state.phone}</p>
-          </div>
+  return showInfo ? (
+    <section>
+      <div className="general">
+        <div className="name">
+          <p>First name: {info.firstName}</p>
+          <p>Last name: {info.lastName}</p>
         </div>
-        <div className="education">
-          <div className="school">
-            <p>School: {this.state.school}</p>
-          </div>
-          <div className="major">
-            <p>Major: {this.state.major}</p>
-          </div>
-          <div className="schoolDate">
-            <p>Date of study: {this.state.email}</p>
-          </div>
+        <div className="email">
+          <p>Email: {info.email}</p>
         </div>
-        <div className="experience">
-          <div className="company">
-            <p>Company: {this.state.company}</p>
-          </div>
-          <div className="position">
-            <p>Position Title: {this.state.position}</p>
-          </div>
-          <div className="tasks">
-            <p>Main Tasks: {this.state.tasks}</p>
-          </div>
-          <div className="companyDate">
-            <p>Date: {this.state.companyDate}</p>
-          </div>
+        <div className="phone">
+          <p>Phone number: {info.phone}</p>
         </div>
-        <button onClick={this.toggleShowInfo}>Edit</button>
-      </section>
-    ) : (
-      <form>
-        <GeneralInfo
-          handleChange={this.handleInputChange}
-          firstName={this.state.firstName}
-          lastName={this.state.lastName}
-          email={this.state.email}
-          phone={this.state.phone}
-        />
-        <Education
-          handleChange={this.handleInputChange}
-          school={this.state.school}
-          major={this.state.major}
-          schoolDate={this.state.schoolDate}
-        />
-        <Experience
-          handleChange={this.handleInputChange}
-          company={this.state.company}
-          position={this.state.position}
-          tasks={this.state.tasks}
-          companyDate={this.state.companyDate}
-        />
-        <button onClick={this.toggleShowInfo}>Submit</button>
-      </form>
-    );
-  }
+      </div>
+      <div className="education">
+        <div className="school">
+          <p>School: {info.school}</p>
+        </div>
+        <div className="major">
+          <p>Major: {info.major}</p>
+        </div>
+        <div className="schoolDate">
+          <p>Date of study: {info.email}</p>
+        </div>
+      </div>
+      <div className="experience">
+        <div className="company">
+          <p>Company: {info.company}</p>
+        </div>
+        <div className="position">
+          <p>Position Title: {info.position}</p>
+        </div>
+        <div className="tasks">
+          <p>Main Tasks: {info.tasks}</p>
+        </div>
+        <div className="companyDate">
+          <p>Date: {info.companyDate}</p>
+        </div>
+      </div>
+      <button onClick={toggleShowInfo}>Edit</button>
+    </section>
+  ) : (
+    <form>
+      <GeneralInfo
+        handleChange={handleInputChange}
+        firstName={info.firstName}
+        lastName={info.lastName}
+        email={info.email}
+        phone={info.phone}
+      />
+      <Education
+        handleChange={handleInputChange}
+        school={info.school}
+        major={info.major}
+        schoolDate={info.schoolDate}
+      />
+      <Experience
+        handleChange={handleInputChange}
+        company={info.company}
+        position={info.position}
+        tasks={info.tasks}
+        companyDate={info.companyDate}
+      />
+      <button onClick={toggleShowInfo}>Submit</button>
+    </form>
+  );
 }
-
-export default App;
